@@ -1,8 +1,6 @@
 ---
 
 - hosts: mac
-  ansible_user = {{ ssh_user }}
-  ansible_ssh_pass = {{ ssh_password }}
   roles:
   - poc
   
