@@ -16,7 +16,7 @@
     "description": "Deploy playbook for test",
     "organization": "Default",
     "scm_type": "git",
-    "scm_url": "https://github.com/Abieskwins_org29/ansible.git",
+    "scm_url": "https://github.com/abisekwins29/ansible.git",
     "scm_branch": "master",
     "scm_clean": true,
     "scm_update_on_launch": false
