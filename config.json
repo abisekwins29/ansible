@@ -7,14 +7,14 @@
       "username": "#{ssh_username}#",
       "password": "#{ssh_password}#",
       "credential_type": "Machine",
-      "organization": "Abieskwins_org"
+      "organization": "Default"
     }
   ],
   "project": {
     "credential": "ansible_poc_cred",
     "name": "POC_PROJ",
     "description": "Deploy playbook for test",
-    "organization": "Abieskwins_org",
+    "organization": "Default",
     "scm_type": "git",
     "scm_url": "https://github.com/Abieskwins_org29/ansible.git",
     "scm_branch": "master",
@@ -24,7 +24,7 @@
   "inventories": [
     {
       "name": "test_inv",
-      "organization": "Abieskwins_org"
+      "organization": "Default"
     }
   ],
   "inventorySources": [
