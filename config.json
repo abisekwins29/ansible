@@ -1,0 +1,49 @@
+{
+  "version": "2",
+  "credentials": [
+    {
+      "name": "ansible_poc_cred",
+      "description": "Required for passwordvault lookup",
+      "username": "#{ssh_username}#",
+      "password": "#{ssh_password}#",
+      "credential_type": "Machine",
+      "organization": "Abieskwins_org"
+    }
+  ],
+  "project": {
+    "credential": "ansible_poc_cred",
+    "name": "POC_PROJ",
+    "description": "Deploy playbook for test",
+    "organization": "Abieskwins_org",
+    "scm_type": "git",
+    "scm_url": "https://github.com/Abieskwins_org29/ansible.git",
+    "scm_branch": "master",
+    "scm_clean": true,
+    "scm_update_on_launch": false
+  },
+  "inventories": [
+    {
+      "name": "test_inv",
+      "organization": "Abieskwins_org"
+    }
+  ],
+  "inventorySources": [
+    {
+      "inventory": "test_inv",
+      "name": "test_inv_source",
+      "source": "scm",
+      "source_path": "inventory/test/hosts.ini",
+      "source_project": "POC_PROJ"
+    }
+  ],
+  "templates": [
+    {
+      "credential": "ansible_poc_cred",
+      "description": "test poc job",
+      "inventory": "test_inv",
+      "name": "test job",
+      "playbook": "site.yml",
+      "project": "POC_PROJ"
+    }
+  ]
+}
