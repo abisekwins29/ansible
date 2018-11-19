@@ -1,0 +1,14 @@
+---
+# tasks file for poc
+
+- name: Creates directory
+  file:
+    path: /tmp/ansible_poc
+    state: directory
+    mode: 0775
+
+- name: Creates file
+  file:
+    path: /tmp/ansible_poc/test
+    state: touch 
+    mode: 0775
