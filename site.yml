@@ -1,6 +1,9 @@
 ---
 
 - hosts: mac
+  vars:
+    ansible_user: "{{ ssh_user }}"
+    ansible_pass: "{{ ssh_password }}"
   roles:
   - poc
   
